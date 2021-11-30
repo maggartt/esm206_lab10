@@ -1,0 +1,41 @@
+---
+title: "Lab 10 Key"
+author: "Trevor Maggart"
+date: "11/30/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(usethis)
+library(janitor)
+library(beepr)
+library(praise)
+library(cowsay)
+library(paletteer)
+library(sf)
+```
+
+## beepr beeps
+
+Use the function `beep()` in the beeper package to make an audio alert when your code is done running.
+
+```{r}
+seq_1 <- rev(seq(1:99))
+for (i in seq_1){
+  print(paste(i, "bottles of beer on the wall"))
+}
+
+beep(4)
+```
+
+## praise and cowsay
+
+Packages built with a single purpose: to be kind and fun. 
+
+```{r}
+praise("Holy ${creating}, Batman - this code is ${ADJECTIVE}!")
+
+```
